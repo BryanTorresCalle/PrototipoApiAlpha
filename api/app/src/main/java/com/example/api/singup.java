@@ -3,7 +3,7 @@ package com.example.api;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class autentication extends AppCompatActivity {
+public class singup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

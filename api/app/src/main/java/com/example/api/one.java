@@ -13,12 +13,8 @@ public class one extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
-
         btnSkip = findViewById(R.id.btnSkip);
-
-        btnSkip.setOnClickListener( o ->  startActivity(new Intent(getApplicationContext(), autentication.class)));
-
-
+        btnSkip.setOnClickListener( o ->  startActivity(new Intent(getApplicationContext(), singup.class)));
 
     }
 }
