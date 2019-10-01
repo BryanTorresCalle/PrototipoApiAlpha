@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".solicitud"></activity>
-        <activity android:name=".register" />
-        <activity android:name=".autentication" />
+        <activity android:name=".singin" />
+        <activity android:name=".singup" />
         <activity android:name=".one" />
         <activity android:name=".MainActivity">
             <intent-filter>
