@@ -25,7 +25,8 @@ public class singin extends AppCompatActivity {
         setContentView(R.layout.activity_signin);
         mAuth = FirebaseAuth.getInstance();
         conectar();
-
+        btnLogin.setOnClickListener(v -> login(etUsuario.getText().toString(),
+                etPassword.getText().toString()));
     }
 
     private void conectar() {

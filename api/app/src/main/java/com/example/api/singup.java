@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class singup extends AppCompatActivity {
     EditText etNombre, etApellido, etDireccion, etEdad, etTelefono, etMail, etPassword, etSexo;
     Button btnRegister;
+    TextView tvCreate;
     private FirebaseAuth mAuth;
 
     @Override
@@ -26,6 +28,7 @@ public class singup extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         conect();
         btnRegister.setOnClickListener(v -> comprobar());
+        tvCreate.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),singin.class)));
     }
 
     private void conect() {
@@ -38,6 +41,7 @@ public class singup extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         etSexo = findViewById(R.id.etSexo);
         btnRegister = findViewById(R.id.btnRegister);
+        tvCreate = findViewById(R.id.tvCreate);
     }
 
     private void comprobar() {
