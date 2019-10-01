@@ -12,12 +12,13 @@
         android:text="AQUI VA EL SLIDE"
         android:layout_width="100dp"
         android:layout_height="100dp" />
-    
+
     <Button
+        android:id="@+id/btnSkip"
         android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentRight="true"
-        android:text="Ignorar"
-        android:layout_height="100dp" />
+        android:text="Ignorar" />
 
 
 </RelativeLayout>
