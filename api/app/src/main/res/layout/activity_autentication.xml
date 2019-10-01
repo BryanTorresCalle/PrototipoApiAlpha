@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".autentication">
+
+    <EditText
+        android:layout_marginTop="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Nombre"
+        android:id="@+id/nombre"/>
+
+    <EditText
+        android:layout_below="@+id/nombre"
+        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Apellido"
+        android:id="@+id/apellido"/>
+
+    <EditText
+        android:layout_below="@id/apellido"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Dirección"
+        android:id="@+id/direccion"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Edad"
+        android:layout_below="@id/direccion"
+        android:id="@+id/edad"/>
+
+    <EditText
+        android:layout_below="@id/edad"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Telefono"
+        android:id="@+id/telefono"/>
+
+    <EditText
+        android:layout_below="@id/telefono"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Sexo"
+        android:id="@+id/sexo"/>
+
+    <EditText
+        android:layout_below="@id/sexo"
+        android:layout_marginTop="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Usuario"
+        android:id="@+id/user"/>
+
+    <EditText
+        android:layout_below="@+id/user"
+        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Contraseña"
+        android:id="@+id/password"/>
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/password"
+        android:text="REGISTRARSE"
+        android:id="@+id/register"
+        android:layout_width="200dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:layout_below="@id/register"
+        android:text="¿ Ya tienes una cuenta ? Ingresa Aquí"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
