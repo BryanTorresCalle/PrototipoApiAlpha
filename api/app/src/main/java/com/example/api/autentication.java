@@ -8,6 +8,6 @@ public class autentication extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_autentication);
+        setContentView(R.layout.activity_signup);
     }
 }
