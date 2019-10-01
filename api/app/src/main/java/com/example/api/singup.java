@@ -1,5 +1,6 @@
 package com.example.api;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,13 +41,16 @@ public class singup extends AppCompatActivity {
     }
 
     private void comprobar() {
-        if (etNombre.getText().equals("") || etSexo.getText().equals("") ||
-                etPassword.getText().equals("") || etMail.getText().equals("") ||
-                etTelefono.getText().equals("") || etApellido.getText().equals("") ||
-                etEdad.getText().equals("") || etDireccion.getText().equals("")) {
+        if (etNombre.getText().toString().equals("") || etSexo.getText().toString().equals("") ||
+                etPassword.getText().toString().equals("") || etMail.getText().toString().equals("") ||
+                etTelefono.getText().toString().equals("") || etApellido.getText().toString().equals("") ||
+                etEdad.getText().toString().equals("") || etDireccion.getText().toString().equals("")) {
             Toast.makeText(this, "Por favor asegurese de llenar todos los campos",
                     Toast.LENGTH_LONG).show();
-        } else {
+        }else if(etPassword.getText().toString().length() < 6){
+            Toast.makeText(getApplicationContext(), "La contraseña debe ser de al menos 6 caracteres",
+                    Toast.LENGTH_LONG).show();
+        } else{
             crearUsuario(etMail.getText().toString(), etPassword.getText().toString());
         }
     }
@@ -56,10 +60,11 @@ public class singup extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
-                        FirebaseUser user = mAuth.getCurrentUser();
+                        Toast.makeText(getApplicationContext(), "Usuario valido",Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(getApplicationContext(),singin.class));
                     } else {
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(getApplicationContext(), "Authentication failed.",
+                        Toast.makeText(getApplicationContext(), "Asegurese de haber ingresado un correo valido",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
